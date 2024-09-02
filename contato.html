@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/contato.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Cultura da Paz</a></div>
+            <ul class="links">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pagepalestrante.html">Palestrantes</a></li>
+                <li><a href="agenda.html">Agendamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <a href="logincadastro.html" class="action_btn">Login</a>
+            </ul>
+            <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+        <div class="dropdown_menu">
+            <ul class="links">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pagepalestrante.html">Palestrantes</a></li>
+                <li><a href="agenda.html">Agendamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="logincadastro.html" class="action_btn">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDwnMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDwnMenu.classList.toggle('open')
+            const isOpen = dropDwnMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen 
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!-- WAVES FUNDO E BANNER-->
+    <!--<div class="wave-header" id="fundo-1">
+         
+        <div class="search_form">
+            <h1>CONTATO</h1><br><br>
+        </div>
+    </div>-->
+
+    <div class="espacamento">
+        <div class="caixa">
+            <div class="form">
+                <div class="info_contato">
+                    <h3 class="h3contato">CONTATO</h3>
+                    <p class="textcontato">
+                        Se você tiver qualquer dúvida, entre em contato no nosso Whatsapp ou E-mail.
+                    </p><br>
+                    <div class="info_c">
+                        <h2>E-MAIL</h2>
+                        <p>juntospelaculturadapaz@gmail.com</p>
+                    </div>
+                    <div class="info_c">
+                        <h2>TELEFONE</h2>
+                        <p>(11) 97962-5033</p>
+                    </div>
+                    <div class="info_c">
+                        <h2>HORÁRIO DE ATENDIMENTO</h2>
+                        <p>Segunda á sexta: das 9h ás 17h</p>
+                    </div>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3859478480354!2d-46.34357062682343!3d-23.518617178829185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7b1f2124d3a5%3A0x11b614022967334c!2sAv.%20Ant%C3%B4nio%20Massa%2C%20310%20-%201%20-%20Centro%2C%20Po%C3%A1%20-%20SP%2C%2008550-350!5e0!3m2!1spt-BR!2sbr!4v1695566045811!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="form_contato">
+                    <form action="#" class="form_cont">
+                        <div class="input_caixa">
+                            <h3>NOME</h3><br>
+                            <input name="nome" type="text" placeholder="Insira seu nome" class="input_contato" required/>
+                        </div>
+                        <div class="input_caixa">
+                            <h3>E-MAIL</h3><br>
+                            <input name="email" type="email" placeholder="Insira seu e-mail" class="input_contato" required/>
+                        </div>
+                        <div class="input_caixa textarea">
+                            <h3>MENSAGEM</h3><br>
+                            <textarea name="mensagem" placeholder="Se você tiver alguma dúvida ou precisar de ajuda" class="input_contato"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar mensagem" class="submit_mensagem">
+                </form>
+                </div>
+            </div>
+        </div><br><br><br><br>
+    </div>
+    
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <img src="image/logo.png" alt="logo" id="logo" />
+                <p>Juntos pela cultura da paz </p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/juntospelaculturadapaz/" id="instagram" class="footer-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5511979625033" id="whatsapp"  class="footer-link">
+                        <i class="fa-brands fa-whatsapp" ></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fotos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Vídeos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Podcasts</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Ajuda</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Chat</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contatos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Dúvidas</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Inscreva-se</h3>
+                <p>
+                    Digite seu E-mail para ser notificado sobre nossos trabalhos.
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

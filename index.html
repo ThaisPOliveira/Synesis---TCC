@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    
+    <!-- MENU -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Cultura da Paz</a></div>
+            <ul class="links">
+                <li><a href="blog.html" id="blink">Blog</a></li>
+                <li><a href="pagepalestrante.html" id="blink">Palestrantes</a></li>
+                <li><a href="agenda.html" id="blink">Agendamento</a></li>
+                <li><a href="contato.html" id="blink">Contato</a></li>
+                <a href="logincadastro.html" class="action_btn">Login</a>
+            </ul>
+            <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+        <div class="dropdown_menu">
+            <ul class="links">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pagepalestrante.html">Palestrantes</a></li>
+                <li><a href="agenda.html">Agendamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="logincadastro.html" class="action_btn">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDwnMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDwnMenu.classList.toggle('open')
+            const isOpen = dropDwnMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen 
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!-- WAVES FUNDO E BANNER-->
+    <div class="wave-header" id="fundo-1">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-baixo" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L120,261.3C240,267,480,277,720,266.7C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+        <div class="search_form">
+            <h1>AGENDAMENTO DE PALESTRAS</h1><br><br>
+            <p>O projeto Cultura da Paz, tem como intuito fornecer palestras focadas em Bullying e Cyberbullying, para empresas e escolas. Agende agora sua palestra!</p><br><br><br>
+            <a id="botao" class="action_btn">Veja mais</a>
+        </div>
+        <script>
+            const botao = document.querySelector('#botao');
+            
+            botao.addEventListener('click',() => {
+                window.scroll({top:window.innerHeight, behavior: "smooth"})
+            })
+        </script>
+    </div>
+
+    <!-- HOME CONTEÚDO-->
+    <div class="espacamento">
+        <div class="porc-card">
+            <article class="porc-article">
+                <i class="fa-solid fa-person-harassing"></i>
+                <h3 class="porc-titulo">40% dos estudantes sofrem Bullying</h3>
+                <p class="porc-descricao">Segundo o PeNSE (Pesquisa Nacional de Saúde Escolar), mais de 40% dos estudantes admitem ao IBGE (Instituto Brasileiro de Geografia).</p>
+            </article>
+
+            <article class="porc-article">
+                <i class="fa-solid fa-school"></i>
+               <h3 class="porc-titulo">Crescimento em Escolas públicos e privadas</h3>
+                <p class="porc-descricao">Nas escolas públicas, a parcela das vitimas de Bullying cresceram de 28,9% para 39,9%. Já nas escolas privada subiu de 35,5% para 41,5%, no mesmo período.</p>
+            </article>
+
+            <article class="porc-article">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3 class="porc-titulo">Mais de 28% dos profissionais já sofreram bullying no trabalho</h3>
+                <p class="porc-descricao">Segundo dados do site CareerBuilder, 28% dos profissionais já sofreram bullying no trabalho.</p>
+            </article>
+        </div>
+
+        <div class="centro">
+            <h2>O que é o Bullying?</h2><br><br>
+            <p>O bullying é a prática repetida de atos violentos, físicos ou psicológicos, por um ou mais agressores contra uma vítima, levando à exclusão social e causando danos psicológicos, como depressão, ansiedade e síndrome do pânico. Se não tratado, pode resultar em comportamentos autodestrutivos e perpetuar o ciclo de violência, com vítimas tornando-se agressores.</p>
+        </div>
+
+        <div class="justify-content-home">
+            <div>
+                <img src="image/image1.jpg" alt="palestra">
+            </div>
+            <div>
+                <h2>Como conscientizar o Bullying?</h2><br><br>
+                <p> Os melhores meios de combate ao bullying são a conscientização e o diálogo. Assim, as palestras voltadas para a prevenção do bullying são fundamentais na abordagem dessa questão.<br><br> palestras podem fornecer informações valiosas sobre como reconhecer os sinais do bullying, como apoiar as vítimas e como trabalhar em conjunto para enfrentar o problema de forma efetiva.</p><br><br><br>
+                <a href="#" class="action_btn">Veja o artigo completo!</a>
+            </div>
+        </div>
+
+        <div class="centro">
+            <h2>Nossos Palestrantes</h2><br><br><br>
+            <div class="palestrantes">
+                <article class="palestrante-card">
+                    <img src="image/eliardo.jpg" alt="ELIARDO JORDÃO"><br><br>
+                    <h3>ELIARDO JORDÃO</h3><br>
+                    <p>Delegado de Polícia e professor universitário.</p>
+                </article>
+                <article class="palestrante-card">
+                    <img src="image/jeruza.jpg" alt="JERUZA REIS"><br><br>
+                    <h3>JERUZA REIS</h3><br>
+                    <p>Especialista em Direito Empresarial com ênfase em Direito Imobiliário e Ambiental; Direito de Família e Interesses Difusos e Coletivos.</p>
+                </article>
+                <article class="palestrante-card">
+                    <img src="image/juliano.jpg" alt="Juliano Duarte"><br><br>
+                    <h3>JULIANO DUARTE</h3><br>
+                    <p>Advogado, Especialista em Direito e Prevenção ao Bullying e Cyberbullying e mestrando em Ciências da Educação</p>
+                </article>
+            </div><br>
+        </div>
+    </div>
+    <div class="wave-header" id="fundo-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-cima" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L60,80C120,64,240,32,360,21.3C480,11,600,21,720,42.7C840,64,960,96,1080,90.7C1200,85,1320,43,1380,21.3L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+            <div class="search_form-outro">
+            <h2>Avaliações</h2>
+            <section class="container">
+                <div class="testimonial mySwiper">
+                  <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                      <img src="image/img1.jpg" alt="" class="image" />
+                      <p>
+                        Tive a oportunidade de participar de uma palestra recentemente e fiquei impressionado com a abordagem dos palestrantes. 
+                        A palestra não apenas destacou os danos emocionais causados, mas também enfatizou a importância da empatia e do respeito mútuo. 
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Isabela Sousa</span>
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                      <img src="image/img2.jpg" alt="" class="image" />
+                      <p>
+                        A palestra anti bullying que participei foi excepcional. 
+                        A interação direta com a plateia criou um ambiente acolhedor, tornando a palestra mais memorável e inspiradora.
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Thais Alves</span>
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                      <img src="image/img3.jpg" alt="" class="image" />
+                      <p>
+                        A palestra anti bullying que assisti não apenas trouxe à tona os desafios enfrentados por vítimas de bullying, mas também se concentrou em inspirar a mudança. 
+                        Saí da palestra sentindo-me motivado a ser parte ativa na prevenção do bullying, seja apoiando colegas ou promovendo uma cultura de aceitação. 
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">José Lopez</span><br><br><br>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next nav-btn"></div>
+                  <div class="swiper-button-prev nav-btn"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <script src="js/swiper-bundle.min.js"></script>
+            <script src="js/script.js"></script>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-baixo" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L80,224C160,224,320,224,480,240C640,256,800,288,960,277.3C1120,267,1280,213,1360,186.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div><br><br><br>
+
+    <div class="espacamento">
+        <div class="justify-content">
+            <div>
+                <h1>Saiba mais <br>do nosso serviço</h1>
+            </div>
+            <div>
+                <p class="paragrafo-branco">Faça seu orçamento agora mesmo!</p><br>
+                <hr><br>
+                <p><b>Converse com um dos nossos palestrantes e agende agora sua palestra</b></p><br><br>
+                <button class="action_btn">orçamento</a>
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <img src="image/logo.png" alt="logo" id="logo" />
+                <p>Juntos pela cultura da paz </p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/juntospelaculturadapaz/" id="instagram" class="footer-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5511979625033" id="whatsapp"  class="footer-link">
+                        <i class="fa-brands fa-whatsapp" ></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fotos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Vídeos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Podcasts</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Ajuda</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Chat</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contatos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Dúvidas</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Inscreva-se</h3>
+                <p>
+                    Digite seu E-mail para ser notificado sobre nossos trabalhos.
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

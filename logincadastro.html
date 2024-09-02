@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="php/verificar.php" method="post" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="image/logo.png" alt="logo" />
+                <h4><a href="index.html">Cultura da Paz</a></h4>
+              </div>
+
+              <div class="heading">
+                <h2>Seja Bem-vindo!</h2>
+                <h6>Não possui cadastro?</h6>
+                <a href="#" class="toggle"><b>Cadastre-se</b></a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input name="email" type="text" minlength="4" class="input-field" required/>
+                  <label>E-mail</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input name="senha" type="password" minlength="4" class="input-field" required/>
+                  <label>Senha</label>
+                </div>
+
+                <input name="submit" type="submit" value="Login" class="sign-btn" />
+
+                <p class="text">Esqueceu sua senha?<a href="php/esqueci_senha.php"><b>altere aqui</b></a> para logar novamente</p>
+              </div>
+            </form>
+
+            <form action="php/cadastrar.php" method="post" autocomplete="off" class="sign-up-form">
+              <div class="logo">
+                <img src="image/logo.png" alt="logo" />
+                <h4><a href="index.html">Cultura da Paz</a></h4>
+              </div>
+
+              <div class="heading">
+                <h2>Cadastrar-se</h2>
+                <h6>Já possui login?</h6>
+                <a href="#" class="toggle"><b>Logar</b></a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input name="nome" type="text" minlength="5" class="input-field" required />
+                  <label>Nome sobrenome</label>
+                </div>
+
+                <div class="input-wrap">
+                    <input name="data" id="dataNascimento" minlength="10" type="date" class="input-field" required/>
+                    <label style="background-color: white;">Data de nascimento</label>
+                </div>          
+
+                <div class="input-wrap">
+                  <input name="email" type="email" class="input-field" required />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input name="senha"
+                    type="password" minlength="4" class="input-field" required/>
+                  <label>Senha</label>
+                </div>
+
+                <input name="submit" type="submit" value="Cadastrar" class="sign-btn" />
+
+                <p class="text">Ao me inscrever, concordo com os<a href="termosdeservico.html"><b>Termos de servico</b></a> e <a href="políticadeprivacidade.html"><b>Politica de Privacidade</b></a></p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="image/img-login1.png" class="image img-1 show" alt="" />
+              <img src="image/img-login2.png" class="image img-2" alt="" />
+              <img src="image/img-login3.png" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>"A vida deve ser uma constante educação"</h2>
+                  <h2>“Só a educação liberta” – Epicteto</h2>
+                  <h2>“A educação transforma o homem"</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript -->
+
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

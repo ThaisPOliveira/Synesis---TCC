@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/blog.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Cultura da Paz</a></div>
+            <ul class="links">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pagepalestrante.html">Palestrantes</a></li>
+                <li><a href="agenda.html">Agendamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <a href="logincadastro.html" class="action_btn">Login</a>
+            </ul>
+            <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+        <div class="dropdown_menu">
+            <ul class="links">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pagepalestrante.html">Palestrantes</a></li>
+                <li><a href="agenda.html">Agendamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="logincadastro.html" class="action_btn">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDwnMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDwnMenu.classList.toggle('open')
+            const isOpen = dropDwnMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen 
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!-- WAVES FUNDO E BANNER-->
+    <div class="wave-header" id="fundo-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-baixo" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L1440,256L1440,320L0,320Z"></path></svg>
+
+        <div class="search_form">
+            <h1>BLOG</h1><br>
+            <p>Dê asas à sua imaginação com nossos artigos!</p><br><br>
+            
+            <form action="">
+                <input name="searchbar" type="text" placeholder="buscar artigo" onkeyup="search()">
+                <button class="button-pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <script>
+                function search() {
+                    const input = document.querySelector('input[name="searchbar"]');
+                    const searchValue = input.value.toLowerCase();
+                    const blogBoxes = document.querySelectorAll('.blog-box');
+    
+                    blogBoxes.forEach((element) => {
+                        const titulo = element.querySelector('.titulo-blog-artigo').textContent.toLowerCase();
+                        if (titulo.includes(searchValue)) {
+                            element.style.display = 'block';
+                        } else {
+                            element.style.display = 'none';
+                        }
+                    });
+                }
+            </script>
+        </div>
+    </div>
+
+    <!--BLOG-->
+   
+        
+        <section id="blog">
+        
+            <div class="blog-container">
+    
+                <!-- Post 1 -->
+                <div class="blog-box">
+    
+                    <div class="blog-img">
+                        <img src="image/b-1.jpg" alt="img">
+                    </div>
+    
+                    <div class="blog-text">
+                        <a href="artigo blog/OqueéBullying.html" class="titulo-blog-artigo"><strong>O que é Bullying</strong></a>
+    
+                        <div class="category-time">
+                            <span class="blog-categoria">Artigo</span>
+                            <span class="data-publicacao">12-11-2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 2-->
+                <div class="blog-box">
+    
+                    <div class="blog-img">
+                        <img src="image/b-2.jpg" alt="img">
+                    </div>
+    
+                    <div class="blog-text">
+                        <a href="artigo blog/guia.html" class="titulo-blog-artigo"><strong>Livro sobre Bullying, Cyberbulling e Violência Familiar</strong></a>
+    
+                        <div class="category-time">
+                            <span class="blog-categoria">Livro</span>
+                            <span class="data-publicacao">06-11-2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 3-->
+                <div class="blog-box">
+    
+                    <div class="blog-img">
+                        <img src="image/b-3.jpg" alt="img">
+                    </div>
+    
+                    <div class="blog-text">
+                        <a href="artigo blog/BullyingBrasil.html" class="titulo-blog-artigo"><strong>Bullying no Brasil</strong></a>
+    
+                        <div class="category-time">
+                            <span class="blog-categoria">Artigo</span>
+                            <span class="data-publicacao">04-11-2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 4-->
+                <div class="blog-box">
+    
+                    <div class="blog-img">
+                        <img src="image/b-4.jpg" alt="img">
+                    </div>
+    
+                    <div class="blog-text">
+                        <a href="artigo blog/podcast.html" class="titulo-blog-artigo"><strong>Podcast - POD.FALAR COM FABIOLA PUPO</strong></a>
+    
+                        <div class="category-time">
+                            <span class="blog-categoria">Podcast</span>
+                            <span class="data-publicacao">27-10-2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 5-->
+                <div class="blog-box">
+    
+                    <div class="blog-img">
+                        <img src="image/b-5.jpg" alt="img">
+                    </div>
+    
+                    <div class="blog-text">
+                        <a href="artigo blog/combaterbullying.html" class="titulo-blog-artigo"><strong>A importância de combater o bullying</strong></a>
+    
+                        <div class="category-time">
+                            <span class="blog-categoria">Artigo</span>
+                            <span class="data-publicacao">20-10-2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 6-->
+                <div class="blog-box">
+    
+                    <div class="blog-img">
+                        <img src="image/b-6.jpg" alt="img">
+                    </div>
+    
+                    <div class="blog-text">
+                        <a href="artigo blog/leispoliticas.html" class="titulo-blog-artigo"><strong>Brasil precisa avançar em leis e políticas públicas contra bullying, diz especialista</strong></a>
+    
+                        <div class="category-time">
+                            <span class="blog-categoria">Artigo</span>
+                            <span class="data-publicacao">16-09-2023</span>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+    <br><br><br><br><br><br>
+
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <img src="image/logo.png" alt="logo" id="logo" />
+                <p>Juntos pela cultura da paz </p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/juntospelaculturadapaz/" id="instagram" class="footer-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5511979625033" id="whatsapp"  class="footer-link">
+                        <i class="fa-brands fa-whatsapp" ></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Blog</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fotos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Vídeos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Podcasts</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Ajuda</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Chat</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contatos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Dúvidas</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Inscreva-se</h3>
+                <p>
+                    Digite seu E-mail para ser notificado sobre nossos trabalhos.
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
